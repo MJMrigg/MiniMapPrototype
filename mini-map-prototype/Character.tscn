@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://77ibjgieng5w"]
+
+[ext_resource type="Script" uid="uid://crwelccjq87hj" path="res://Controller.cs" id="1_7ig0a"]
+[ext_resource type="Texture2D" uid="uid://84gteg178x16" path="res://icon.svg" id="1_oolk3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_y7k42"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ig0a"]
+
+[node name="Character" type="CharacterBody3D"]
+script = ExtResource("1_7ig0a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_y7k42")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+layers = 2
+axis = 1
+texture = ExtResource("1_oolk3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_7ig0a")
