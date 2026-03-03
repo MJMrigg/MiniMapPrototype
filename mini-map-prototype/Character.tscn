@@ -7,13 +7,16 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ig0a"]
 
-[node name="Character" type="CharacterBody3D"]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("MiniMapIcon")]
 script = ExtResource("1_7ig0a")
+MiniMapIcon = NodePath("Sprite3D")
+IconScale = 1.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_y7k42")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 layers = 2
 axis = 1
 texture = ExtResource("1_oolk3")
