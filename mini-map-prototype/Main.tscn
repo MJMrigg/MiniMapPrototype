@@ -56,11 +56,12 @@ handle_input_locally = false
 size = Vector2i(256, 256)
 render_target_update_mode = 4
 
-[node name="MapCam" type="Camera3D" parent="MiniMapUI/MiniAmp"]
+[node name="MapCam" type="Camera3D" parent="MiniMapUI/MiniAmp" node_paths=PackedStringArray("Target")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 65.78512, 0)
 cull_mask = 1047554
 script = ExtResource("1_glv2v")
-FollowY = 20.0
+Target = NodePath("../../../Character")
+FollowY = 10.0
 
 [node name="Character" parent="." instance=ExtResource("2_uu6xs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9496474, 0)

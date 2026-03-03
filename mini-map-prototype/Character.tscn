@@ -10,16 +10,33 @@
 [node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("MiniMapIcon")]
 script = ExtResource("1_7ig0a")
 MiniMapIcon = NodePath("Sprite3D")
-IconScale = 1.0
+IconScale = 3.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_y7k42")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 layers = 2
 axis = 1
 texture = ExtResource("1_oolk3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_7ig0a")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6133367, 0)
+text = "Name"
+
+[node name="MapName" type="Label3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0, 1, 0)
+top_level = true
+layers = 2
+modulate = Color(1, 0, 0, 1)
+text = "Name"
+font_size = 240
+outline_size = 100
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 0)
+remote_path = NodePath("../MapName")
+update_rotation = false

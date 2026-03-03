@@ -14,14 +14,14 @@ material = SubResource("StandardMaterial3D_8koxk")
 [node name="Tree" type="CharacterBody3D" node_paths=PackedStringArray("MiniMapIcon")]
 script = ExtResource("1_dn7q5")
 MiniMapIcon = NodePath("Sprite3D")
-IconScale = 1.0
+IconScale = 3.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CylinderMesh_8koxk")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5574038, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5574038, 0)
 layers = 2
 modulate = Color(1, 0.48235294, 0, 1)
 axis = 1
